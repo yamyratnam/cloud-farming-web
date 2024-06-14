@@ -12,7 +12,7 @@ import User from '../user';
 export default function Page() {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const userSession = sessionStorage.getItem('user');
+  const userSession = window.sessionStorage.getItem('user');
   
   console.log({ user });
 

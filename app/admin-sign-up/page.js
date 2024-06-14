@@ -22,7 +22,7 @@ const page = () => {
             uid: user.uid
         })
 
-        sessionStorage.setItem('user', true);
+        window.sessionStorage.setItem('user', true);
         setEmail('');
         setPassword('');
         router.push('/');

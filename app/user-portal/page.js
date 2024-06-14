@@ -28,7 +28,7 @@ const UserPortal = () => {
     try {
       const res = await signInWithEmailAndPassword(emailSignIn, passwordSignIn);
       console.log({ res });
-      sessionStorage.setItem('user', true);
+      window.sessionStorage.setItem('user', true);
       setEmailSignIn('');
       setPasswordSignIn('');
       router.push('/home-page');
@@ -51,7 +51,7 @@ const UserPortal = () => {
         name: name,
       });
 
-      sessionStorage.setItem('user', true);
+      window.sessionStorage.setItem('user', true);
       setEmailSignUp('');
       setPasswordSignUp('');
       setName('');

@@ -6,7 +6,7 @@ import { auth } from './firebase/config';
 
 const Footer = () => {
     const [user] = useAuthState(auth);
-    const userSession = sessionStorage.getItem('user');
+    const userSession = window.sessionStorage.getItem('user');
     const router = useRouter();
     
     return (

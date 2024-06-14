@@ -30,7 +30,7 @@ const AdminPortal = () => {
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
-        sessionStorage.setItem('user', true);
+        window.sessionStorage.setItem('user', true);
         setEmailSignIn('');
         setPasswordSignIn('');
         router.push('/');
@@ -54,7 +54,7 @@ const AdminPortal = () => {
         uid: user.uid
       });
 
-      sessionStorage.setItem('user', true);
+      window.sessionStorage.setItem('user', true);
       setEmailSignUp('');
       setPasswordSignUp('');
       router.push('/');

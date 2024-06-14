@@ -11,7 +11,7 @@ export default function Page() {
   const [user, loading, error] = useAuthState(auth);
   const router = useRouter();
   const [isAdmin, setIsAdmin] = useState(false);
-  const userSession = sessionStorage.getItem('user');
+  const userSession = window.sessionStorage.getItem('user');
   const [story, setStory] = useState([]);
 
   useEffect(() => {

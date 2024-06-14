@@ -11,7 +11,7 @@ import Topbar from '../topbar';
 export default function Page() {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const userSession = sessionStorage.getItem('user');
+  const userSession = window.sessionStorage.getItem('user');
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);

@@ -29,7 +29,7 @@ const SignUpPage = () => {
                 name: name,
             });
 
-            sessionStorage.setItem('user', true);
+            window.sessionStorage.setItem('user', true);
             setEmail('');
             setPassword('');
             setName('');
