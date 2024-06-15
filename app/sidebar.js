@@ -113,7 +113,7 @@ const Sidebar = () => {
             </p>
             <ul className="space-y-2">
                 <li className="text-black p-2 rounded-md hover:bg-gray-300 cursor-pointer">
-                    <Link href="/">
+                    <Link href="/dashboard">
                         <span className="flex items-center justify-between">
                             <span>All Stories</span>
                             <span className="bg-gray-200 text-green-500 px-2 py-1 rounded-md ml-2">{storyCount}</span>
