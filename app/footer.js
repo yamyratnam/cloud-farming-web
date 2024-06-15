@@ -1,12 +1,11 @@
 import { ArrowCircleRightIcon } from '@heroicons/react/solid';
-import Link from 'next/link';
+import { signOut } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './firebase/config';
 
 const Footer = () => {
     const [user] = useAuthState(auth);
-    const userSession = window.sessionStorage.getItem('user');
     const router = useRouter();
     
     return (
@@ -21,6 +20,7 @@ const Footer = () => {
             <div className="flex items-center m-4">
                 <ul className="flex space-x-4">
                     <li onClick={() => {
+                        signOut(auth);
                         router.push('/user-sign-in');
                     }}
                         className="text-white flex items-center p-2 rounded-md hover:bg-yellow-700 cursor-pointer">
@@ -34,20 +34,12 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <div className="w-full mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex flex-col md:flex-row items-center justify-between">
-                <Link
-                    href="/sitemap.xml"
-                    className="text-center underline my-4 md:my-0"
-                >
-                    sitemap.xml
-                </Link>
+            <div className="w-full mt-16 py-6 px-8 border-t border-solid border-light flex items-center justify-center">
                 <span className="text-center">
                     &copy;2024 Myriad Concepts & Strategies. All rights reserved.
                 </span>
-                <div className="text-center">
-                    Made with &hearts;
-                </div>
             </div>
+
         </footer>
 
 

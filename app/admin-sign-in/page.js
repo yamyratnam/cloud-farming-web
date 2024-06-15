@@ -22,7 +22,6 @@ const page = () => {
         const docSnap = await getDoc(docRef);
 
         if(docSnap.exists()) {
-          window.sessionStorage.setItem('user', true);
           setEmail('');
           setPassword('');
           router.push('/');

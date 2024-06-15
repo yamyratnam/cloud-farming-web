@@ -12,12 +12,9 @@ import User from '../user';
 export default function Page() {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const userSession = window.sessionStorage.getItem('user');
-  
-  console.log({ user });
 
-  if (!user && !userSession) {
-    router.push('/user-sign-in');
+  if (!user) {
+    router.push('/admin-portal');
   }
   
   const [users, setUser] = useState([])

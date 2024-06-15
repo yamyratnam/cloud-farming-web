@@ -101,19 +101,32 @@ const Topbar = () => {
                     <span className='font-semibold'>{userName}</span>
                 </p>
                 <p className="text-black flex items-center space-x-2 justify-center mt-6">
-                    <Link href="/home-page" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
-                        <span>Home</span>
-                    </Link>
-                    <Link href="/home-page#all-stories" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
-                        <span>All Stories</span>
-                    </Link>
-                    <Link href="/about-page" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
-                        <span>About Us</span>
-                    </Link>
-                    {isAdmin && (
-                        <Link href="/dashboard" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
-                            <span>Admin Portal</span>
-                        </Link>
+                    {user ? (
+                        <>
+                            <Link href="/home-page" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
+                                <span>Home</span>
+                            </Link>
+                            <Link href="/home-page#all-stories" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
+                                <span>All Stories</span>
+                            </Link>
+                            <Link href="/about-page" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
+                                <span>About Us</span>
+                            </Link>
+                            {isAdmin && (
+                                <Link href="/dashboard" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
+                                    <span>Admin Portal</span>
+                                </Link>
+                            )}
+                        </>
+                    ) : (
+                        <>
+                            <Link href="/user-portal" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
+                                <span>User Portal</span>
+                            </Link>
+                            <Link href="/permit-admin-portal" className='hover:bg-gray-300 cursor-pointer rounded-md p-2'>
+                                <span>Admin Portal</span>
+                            </Link>
+                        </>
                     )}
                 </p>
             </div>
@@ -123,7 +136,6 @@ const Topbar = () => {
                         <li
                             onClick={() => {
                                 signOut(auth);
-                                window.sessionStorage.removeItem('user');
                             }}
                             className="text-black flex items-center p-2 rounded-md hover:bg-gray-300 cursor-pointer"
                         >

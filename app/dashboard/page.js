@@ -11,14 +11,13 @@ export default function Page() {
   const [user, loading, error] = useAuthState(auth);
   const router = useRouter();
   const [isAdmin, setIsAdmin] = useState(false);
-  const userSession = window.sessionStorage.getItem('user');
   const [story, setStory] = useState([]);
 
   useEffect(() => {
     if (loading) return; // Wait for the user to load
 
-    if (!user && !userSession) {
-      router.push('/user-sign-in');
+    if (!user) {
+      router.push('/user-portal');
       return;
     }
 
@@ -32,21 +31,11 @@ export default function Page() {
         } else {
           router.push('/home-page');
         }
-      } else if (userSession) {
-        const sessionUser = JSON.parse(userSession);
-        const adminDocRef = doc(db, "Admin", sessionUser.email);
-        const adminDoc = await getDoc(adminDocRef);
-
-        if (adminDoc.exists()) {
-          setIsAdmin(true);
-        } else {
-          router.push('/home-page');
-        }
       }
     };
 
     checkAdmin();
-  }, [user, loading, userSession, router]);
+  }, [user, loading, router]);
 
   useEffect(() => {
     if (isAdmin) {
@@ -67,7 +56,7 @@ export default function Page() {
     }
   }, [isAdmin]);
 
-  if (loading || (!isAdmin && !userSession)) {
+  if (loading || (!isAdmin)) {
     return <div>Loading...</div>; // Optionally show a loading state
   }
 

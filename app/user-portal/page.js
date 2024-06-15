@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth, db } from '../firebase/config';
+import Topbar from '../topbar';
 
 const UserPortal = () => {
   // Sign In State
@@ -28,7 +29,6 @@ const UserPortal = () => {
     try {
       const res = await signInWithEmailAndPassword(emailSignIn, passwordSignIn);
       console.log({ res });
-      window.sessionStorage.setItem('user', true);
       setEmailSignIn('');
       setPasswordSignIn('');
       router.push('/home-page');
@@ -51,7 +51,6 @@ const UserPortal = () => {
         name: name,
       });
 
-      window.sessionStorage.setItem('user', true);
       setEmailSignUp('');
       setPasswordSignUp('');
       setName('');
@@ -65,25 +64,17 @@ const UserPortal = () => {
     }
   };
 
-  // Navigation Handlers
-  const redirectToSignUpasAdmin = () => {
-    router.push('/permit-admin-portal');
-  };
-
-  const redirectToSignInasUser = () => {
-    router.push('/user-portal');
-  };
-
-  const redirectToSignUpasUser = () => {
-    router.push('/user-portal');
-  };
 
   return (
     <div className="min-h-screen py-2 flex items-center justify-center bg-gray-100">
-      <div className="flex bg-white px-10 rounded-lg shadow-xl w-full max-w-5xl">
+    <Topbar />
+      <div className="flex bg-white px-10 rounded-lg shadow-xl w-full max-w-5xl mt-52">
         {/* Sign In Section */}
         <div className="w-1/2 p-5">
           <h1 className="text-black font-semibold text-2xl mb-5">Sign In</h1>
+          <p className="mb-4 text-black">
+            Sign in to your account!
+          </p>
           <input
             type="email"
             placeholder="Email"
@@ -104,22 +95,13 @@ const UserPortal = () => {
           >
             Sign In
           </button>
-          <p className="mt-4 text-black text-center">
-            Don't have an account?{' '}
-            <span className="text-blue-600 font-semibold cursor-pointer" onClick={redirectToSignUpasUser}>
-              Sign Up
-            </span>
-          </p>
-          <p className="mt-4 text-black text-center">
-            Are you an Admin?{' '}
-            <span className="text-blue-600 cursor-pointer font-semibold" onClick={redirectToSignUpasAdmin}>
-              Go to Admin Portal
-            </span>
-          </p>
         </div>
         {/* Sign Up Section */}
         <div className="w-1/2 p-5 border-l border-gray-300">
           <h1 className="text-black font-semibold text-2xl mb-5">Sign Up</h1>
+          <p className="mb-4 text-black">
+            Create a new account!
+          </p>
           <input
             type="text"
             placeholder="Name"
@@ -209,18 +191,6 @@ const UserPortal = () => {
           >
             Sign Up
           </button>
-          <p className="mt-4 text-black text-center">
-            Already have an account?{' '}
-            <span className="text-blue-600 cursor-pointer font-semibold" onClick={redirectToSignInasUser}>
-              Sign in
-            </span>
-          </p>
-          <p className="mt-4 text-black text-center">
-            Are you an Admin?{' '}
-            <span className="text-blue-600 cursor-pointer font-semibold" onClick={redirectToSignUpasAdmin}>
-              Go to Admin Portal
-            </span>
-          </p>
         </div>
       </div>
     </div>

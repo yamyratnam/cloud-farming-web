@@ -11,7 +11,6 @@ import Topbar from '../topbar';
 export default function Page() {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const userSession = window.sessionStorage.getItem('user');
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,8 +31,8 @@ export default function Page() {
     }
   };
 
-  if (!user && !userSession) {
-    router.push('/user-sign-in');
+  if (!user) {
+    router.push('/user-portal');
   }
 
   const [top4story, setTop4Story] = useState([]);

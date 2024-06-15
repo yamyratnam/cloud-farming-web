@@ -152,7 +152,6 @@ const Sidebar = () => {
             <ul className="py-4">
                 <li onClick={() => {
                     signOut(auth)
-                    window.sessionStorage.removeItem('user')
                 }}
                     className="text-black flex items-center justify-between p-2 rounded-md hover:bg-gray-300 cursor-pointer">
                     <span>Logout</span>
