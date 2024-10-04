@@ -12,9 +12,7 @@ export default function Page() {
   const [user] = useAuthState(auth);
   const router = useRouter();
 
-  if (!user) {
-    router.push('/user-portal');
-  }
+   
 
 
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -31,9 +31,7 @@ export default function Page() {
     }
   };
 
-  if (!user) {
-    router.push('/user-portal');
-  }
+   
 
   const [top4story, setTop4Story] = useState([]);
   const [story, setStory] = useState([]);

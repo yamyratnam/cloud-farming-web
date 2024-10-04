@@ -32,13 +32,6 @@ export default function Page() {
       setStory(Stories);
     });
 
-    if (!isLoggedIn) {
-      const timer = setTimeout(() => {
-        setShowPopup(true);
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-
     return () => {
       unsubscribeAuth();
       unsubscribeSnapshot();
@@ -111,23 +104,7 @@ export default function Page() {
         <Footer />
       </div>
 
-      {/* Registration Popup */}
-      {showPopup && !isLoggedIn && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-            <h2 className="text-2xl font-semibold mb-4">Register Now</h2>
-            <p className="mb-4">Please register to access more features.</p>
-            <button
-              className="px-4 py-2 bg-blue-500 text-white rounded"
-              onClick={() => {
-                router.push('/user-portal')
-              }}
-            >
-              Register
-            </button>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 }
