@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AF Farming Community",
+  title: "Cloud Farming",
   description: "Created by Pulivarthi Yamini Ratnam",
 };
 

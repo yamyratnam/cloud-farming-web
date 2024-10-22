@@ -77,6 +77,7 @@ export default function Page() {
               key={story.id}
               id={story.id}
               title={story.title}
+              timestamp={story.timestamp}
               details={story.details}
               locationOfFarm={story.locationOfFarm}
               sizeOfCultivation={story.sizeOfCultivation}

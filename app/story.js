@@ -30,7 +30,7 @@ const Story = ({
     const firstImage = images && images.length > 0 ? images[0] : 'No Image'; // Change to your "No Image" path
 
     return (
-        <div className="mt-8">
+        <div className="mt-8 border border-gray-300">
             <div onClick={(e) => seeMore(id, e)} className="rounded-md cursor-pointer p-4 mb-4 transition-all duration-300 hover: group">
                 <div className="mb-4 overflow-hidden rounded-md">
                     <img src={firstImage} alt={title} className="w-full h-80 object-cover rounded-md transition-transform duration-300 transform group-hover:scale-105" />
