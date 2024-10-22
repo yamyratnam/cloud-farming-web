@@ -65,7 +65,7 @@ const AdminPortal = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
     <Topbar />
-      <div className="flex bg-white p-10 rounded-lg shadow-xl w-full max-w-5xl mt-40">
+      <div className="flex bg-white p-10 rounded-lg shadow-xl w-full max-w-5xl mt-80">
         {/* Sign In Section */}
         <div className="w-1/2 p-5">
           <h1 className="text-black font-semibold text-2xl mb-5">Admin Sign In</h1>

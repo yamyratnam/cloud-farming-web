@@ -36,7 +36,7 @@ export default function Page() {
   
     const slides = [
       {
-        image: '/assets/hero4.jpg', // Slide 1 image
+        image: '/assets/hero4.png', // Slide 1 image
         title: 'FARMER STORIES',
         subtitle: 'FRESH FROM THE FIELD: FARMER\'S STORIES',
       },

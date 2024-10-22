@@ -25,7 +25,7 @@ const page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
     <Topbar />
-      <div className="bg-white p-10 rounded-lg shadow-xl w-96">
+      <div className="bg-white p-10 rounded-lg shadow-xl w-96 mt-80">
         <h1 className="text-black font-semibold text-2xl mb-5">Do you have the Key to Access Admin Portal?</h1>
         <input
           type="key"
