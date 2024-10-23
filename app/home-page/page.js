@@ -53,18 +53,18 @@ export default function Page() {
         title: 'CLIMATE RESILIENT FARMING',
       },
       {
-        image: '/assets/3.jpg', // Slide 5 image
+        image: '/assets/event.jpg', // Slide 5 image
         title: 'EVENTS',
       },
     ];
     
     const images = [
       "/assets/1.jpg",
-      "/assets/2.jpg",
-      "/assets/3.jpg",
-      "/assets/4.jpg",
+      "/assets/6.jpg",
       "/assets/5.jpg",
-      "/assets/6.jpg"
+      "/assets/4.jpg",
+      "/assets/3.jpg",
+      "/assets/2.jpg"
     ];
   
     const [currentPage, setCurrentPage] = useState(1);

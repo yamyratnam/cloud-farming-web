@@ -1,5 +1,3 @@
-import { ArrowCircleRightIcon } from '@heroicons/react/solid';
-import { signOut } from 'firebase/auth';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -13,15 +11,11 @@ const Footer = () => {
     return (
         <footer className="mt-16 w-full flex flex-col items-center text-white bg-lime-700">
             <div className="flex flex-col sm:flex-row w-full justify-center space-y-8 sm:space-y-0 sm:space-x-8 mt-4"> {/* Space between sections */}
-                {/* Part 1: Contact Us */}
+                {/* Part 1: Socials */}
                 <div className="flex-1 px-4 py-6 text-left border-r border-dotted border-white last:border-0 max-w-xs">
                     <h3 className="font-medium capitalize text-2xl sm:text-3xl lg:text-4xl">
-                        Contact Us
+                        Socials
                     </h3>
-                    <p className="mt-4 text-sm sm:text-base font-light">
-                        For inquiries, reach out to us at: <br />
-                        <a href="mailto:in.ywcglobal@gmail.com" className="underline">in.ywcglobal@gmail.com</a>
-                    </p>
 
                     {/* Social Media Icons Section */}
                     <div className="mt-12 flex space-x-4">
@@ -116,7 +110,7 @@ const Footer = () => {
                     >
                         <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white">
                             <Image 
-                                src="/assets/connect2.jpg" 
+                                src="/assets/connect2.png" 
                                 alt="Instagram Profile 2" 
                                 layout="fill" 
                                 className="object-cover"
@@ -181,7 +175,7 @@ const Footer = () => {
                     >
                         <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white">
                             <Image 
-                                src="/assets/connect2.jpg" 
+                                src="/assets/connect2.png" 
                                 alt="Youtube Profile 2" 
                                 layout="fill" 
                                 className="object-cover"
@@ -237,7 +231,7 @@ const Footer = () => {
                             className="bg-white" // Full width and auto height
                         />
                         <Image
-                            src="/assets/accion.png" // Adjust the path as needed
+                            src="/assets/accion.jpg" // Adjust the path as needed
                             width={100} // Adjust for correct dimensions
                             height={100}
                             alt="Accion logo"
@@ -251,7 +245,7 @@ const Footer = () => {
                             className="bg-white" // Full width and auto height
                         />
                         <Image
-                            src="/assets/connect2.jpg" // Adjust the path as needed
+                            src="/assets/wtp.png" // Adjust the path as needed
                             width={100} // Adjust for correct dimensions
                             height={100}
                             alt="WTP logo"
@@ -264,46 +258,20 @@ const Footer = () => {
                 {/* Part 3: Sign Up */}
                 <div className="flex-1 px-4 py-6 text-left max-w-xs"> {/* No border on the last section */}
                     <h3 className="font-medium capitalize text-2xl sm:text-3xl lg:text-4xl">
-                        Sign Up
+                        Contact Us
                     </h3>
                     <p className="mt-4 text-sm sm:text-base font-light">
-                        Join us here: <br />
+                        For inquiries, reach out to us at: <br />
+                        <a href="mailto:in.ywcglobal@gmail.com" className="underline">in.ywcglobal@gmail.com</a>
                     </p>
-                    <div className="mt-4 text-left">
-                        <ul className="flex space-x-4">
-                            <li onClick={() => {
-                                signOut(auth);
-                                router.push('/user-portal');
-                            }}
-                                className="text-white flex items-center p-2 rounded-md hover:bg-yellow-700 cursor-pointer">
-                                <span className='px-2'>Register</span>
-                                <span className="text-white-500 px-2 py-2 rounded-md">
-                                    <button className="text-white-500 rounded-md flex items-center justify-center">
-                                        <ArrowCircleRightIcon className="h-8 w-8" />
-                                    </button>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 className="font-medium capitalize text-lg mt-2">
-                        Admin?
-                    </h4>
-                    <div className="text-left">
-                        <ul className="flex space-x-4">
-                            <li onClick={() => {
-                                signOut(auth);
-                                router.push('/permit-admin-portal');
-                            }}
-                                className="text-white flex items-center p-2 rounded-md hover:bg-yellow-700 cursor-pointer">
-                                <span className='px-2'>Enter</span>
-                                <span className="text-white-500 rounded-md">
-                                    <button className="text-white-500 rounded-md flex items-center justify-center">
-                                        <ArrowCircleRightIcon className="h-8 w-8" />
-                                    </button>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
+                    <p className="mt-4 text-sm sm:text-base font-light">
+                        or: <br />
+                        <a href="mailto:wtp.india2023@gmail.com" className="underline">wtp.india2023@gmail.com</a>
+                    </p>
+                    <p className="mt-8 text-sm sm:text-base font-light">
+                        Address: <br />
+                        Upparapalli Road, Bangalore Highway, Anantapur - 515002, Andhra Pradesh - India.
+                    </p>
                 </div>
             </div>
 

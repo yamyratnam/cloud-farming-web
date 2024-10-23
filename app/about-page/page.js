@@ -31,13 +31,13 @@ export default function Page() {
       {/* Accion Fraterna Ecology Centre */}
       <h2 className="text-2xl font-bold mt-10 mb-4 flex items-center">
         <Image
-          src="/assets/accion.png"
+          src="/assets/accion.jpg"
           width={150} // Adjust the width as necessary
           height={150} // Adjust the height as necessary
           alt="Accion Fraterna Icon"
           className="mr-2"
         />
-        ACCION FRATERNA ECOLOGY CENTRE (RDT)
+        Accion Fraterna Ecology Centre (RDT)
       </h2>
       <div className="w-full max-w-4xl mt-10 px-6 sm:px-12">
         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
@@ -62,7 +62,7 @@ export default function Page() {
           alt="Yes We Can Icon"
           className="mr-2 bg-white"
         />
-        YES WE CAN YOUTH ORGANIZATION (YWC)
+        Yes We Can Youth Organization (YWC)
       </h2>
       <div className="w-full max-w-4xl mt-10 px-6 sm:px-12">
         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
@@ -72,7 +72,7 @@ export default function Page() {
           </p>
 
           <p className="text-lg text-gray-800 leading-relaxed mt-4">
-            With <strong>3,000+ youth</strong>, <strong>1,500+ students</strong>, and <strong>4 SDG Labs</strong>, YWC has organized <strong>10+ International Fleet Reviews, Conventions, MUNs, Youth Parliaments</strong>, and <strong>25+ community engagement initiatives</strong>. 
+            With <strong>3,000+ youth</strong>, <strong>1,500+ students</strong>, and <strong>4 SDG Labs</strong>, YWC has organized <strong>10+ such as International Fleet Review, Conventions, BRICS summit, MUNs, Youth Parliaments</strong>, and <strong>25+ community engagement initiatives</strong>. 
             It also undertakes <strong>paralegal literacy</strong> and <strong>girl students' capacity-building projects</strong>.
           </p>
 
@@ -91,7 +91,7 @@ export default function Page() {
           alt="King's College Icon"
           className="mr-2 bg-white"
         />
-        KING'S COLLEGE LONDON ALUMNI COMMUNITY HYDERABAD (KCLAHyd)
+        King's College London Alumni Community Hyderabad (KCLAHyd)
       </h2>
       <div className="w-full max-w-4xl mt-10 px-6 sm:px-12">
         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
@@ -112,13 +112,13 @@ export default function Page() {
       {/* We The People India Trust */}
       <h2 className="text-2xl font-bold mt-10 mb-4 flex items-center">
         <Image
-          src="/assets/connect2.jpg"
+          src="/assets/wtp.png"
           width={150}
           height={150}
           alt="We The People Icon"
           className="mr-2"
         />
-        WE THE PEOPLE INDIA, TRUST (WTP)
+        We the people India, Trust (WTP)
       </h2>
       <div className="w-full max-w-4xl mt-10 px-6 sm:px-12">
         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
