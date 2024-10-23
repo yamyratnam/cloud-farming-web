@@ -22,7 +22,7 @@ const people = [
     name: "Mr. Stephen Anurag Prathipati",
     subtitle: "AKC",
     info: "NISG Project Officer in Meghalaya (department of planning, health & family welfare and MIG), Mr Stephen led to the inception of Yes We Can, We the People India Trust and NSWS. He has been awarded Clinton Global Initiative Award 2020 and recipient of King’s International Scholarship in 2019. He secured MSc in Public Policy and Management from King’s College London and is a pioneer in advocating localizing SDGs and establishing digital platforms for discussion labs at educational institutions. He was a co-initiator of a maiden Startup in teaching foreign languages way back in 2015.",
-    photo: "/assets/stephen.jpg",
+    photo: "/assets/stephen.png",
   },
   {
     name: "Mr. Ramesh Susarla",
