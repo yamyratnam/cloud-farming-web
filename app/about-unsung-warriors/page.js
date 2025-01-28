@@ -41,12 +41,6 @@ const people = [
     photo: "/assets/boya.jpg",
   },
   {
-    name: "Ms. Yamini Ratnam",
-    subtitle: "IIITDMJ",
-    info: "A graduate of computer science engineering from Indian Institute of Information Technology, Design and Manufacturing Jabalpur, Ms Yami interned with Myriad Concepts & Strategies and facilitated in the development of digital platforms for the joint initiative of Cloud Farming.",
-    photo: "/assets/yamini.jpg",
-  },
-  {
     name: "Mr. Prem Praveen",
     subtitle: "IIM",
     info: "A graduate of Management Sciences from Indian Institute of Management Raipur, having served in Berger Paints Groups as a regional business head. Mr Prem has deep dive interest towards youth in civil services and engaging strategic academic and research approaches towards marketing in the commercial sector.",
